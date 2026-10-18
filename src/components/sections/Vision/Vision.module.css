@@ -1,0 +1,156 @@
+.vision {
+  padding: 0 0 90px;
+}
+
+.visionCard {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 35px;
+  align-items: center;
+  padding: 45px;
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  border-radius: 28px;
+  background:
+    radial-gradient(ellipse at 90% 15%, rgba(139, 92, 246, 0.16), transparent 38%),
+    linear-gradient(130deg, #101d36, #0b172d);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.futureLabel {
+  display: inline-flex;
+  padding: 7px 11px;
+  border: 1px solid rgba(187, 160, 255, 0.26);
+  border-radius: 99px;
+  background: rgba(139, 92, 246, 0.12);
+  color: #d4c4ff;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.title {
+  font-family: var(--serif);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  font-size: clamp(32px, 3.6vw, 45px);
+  line-height: 1.15;
+  margin: 16px 0;
+  color: var(--text);
+}
+
+.visionCard p {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+.visionCard p:last-child {
+  margin-bottom: 0;
+}
+
+.visionCard strong {
+  color: #e2e8f0;
+}
+
+.visionVisual {
+  display: grid;
+  place-items: center;
+  min-height: 230px;
+}
+
+.orbit {
+  width: 210px;
+  height: 210px;
+  border: 1px solid rgba(147, 197, 253, 0.25);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.orbit::before,
+.orbit::after {
+  content: "";
+  position: absolute;
+  inset: 22px;
+  border: 1px dashed rgba(20, 216, 198, 0.27);
+  border-radius: 50%;
+}
+
+.orbit::after {
+  inset: 48px;
+  border-style: solid;
+  border-color: rgba(139, 92, 246, 0.28);
+}
+
+.orbitCore {
+  width: 70px;
+  height: 70px;
+  border-radius: 23px;
+  background: linear-gradient(145deg, #2563eb, #8b5cf6 65%, #14d8c6);
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  box-shadow: 0 0 45px rgba(59, 130, 246, 0.28);
+  color: #ffffff;
+}
+
+.orbitTag {
+  position: absolute;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #12213b;
+  font-size: 11px;
+  color: #d8e4f8;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.orbitTag:hover {
+  transform: scale(1.05);
+  border-color: #5e84c2;
+}
+
+.tagA {
+  top: 8px;
+  left: -26px;
+}
+
+.tagB {
+  right: -30px;
+  top: 82px;
+}
+
+.tagC {
+  bottom: 8px;
+  left: 12px;
+}
+
+@media (max-width: 900px) {
+  .visionCard {
+    grid-template-columns: 1fr;
+  }
+
+  .visionVisual {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 680px) {
+  .vision {
+    padding-bottom: 65px;
+  }
+
+  .visionCard {
+    padding: 26px 21px;
+    gap: 16px;
+  }
+
+  .orbit {
+    transform: scale(0.88);
+  }
+}

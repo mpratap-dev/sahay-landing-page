@@ -1,0 +1,42 @@
+.closing {
+  padding: 20px 0 90px;
+}
+
+.closingInner {
+  text-align: center;
+  padding: 55px 25px;
+  border: 1px solid var(--line);
+  border-radius: 27px;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(59, 130, 246, 0.15), transparent 55%),
+    #0d1930;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+.title {
+  font-family: var(--serif);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  font-size: clamp(32px, 4vw, 47px);
+  max-width: 650px;
+  margin: 15px auto;
+  color: var(--text);
+}
+
+.description {
+  color: var(--muted);
+  max-width: 520px;
+  margin: 0 auto 25px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+@media (max-width: 680px) {
+  .closing {
+    padding-bottom: 65px;
+  }
+
+  .closingInner {
+    padding: 40px 18px;
+  }
+}

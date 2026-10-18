@@ -1,0 +1,14 @@
+:root {
+  --bg: #070f21;
+  --panel: #0d1930;
+  --panel2: #101e38;
+  --line: #223453;
+  --text: #f4f7ff;
+  --muted: #a9b6cc;
+  --blue: #3b82f6;
+  --teal: #14d8c6;
+  --purple: #8b5cf6;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", system-ui, sans-serif;
+  --max: 1160px;
+}

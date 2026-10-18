@@ -1,0 +1,26 @@
+@import './variables.css';
+@import './reset.css';
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image:
+    radial-gradient(ellipse at 80% 0%, #3b82f61b, transparent 34%),
+    radial-gradient(ellipse at 0% 40%, #8b5cf612, transparent 30%);
+  min-height: 100vh;
+}
+
+.wrap {
+  width: min(var(--max), calc(100% - 48px));
+  margin: 0 auto;
+}
+
+@media (max-width: 680px) {
+  .wrap {
+    width: calc(100% - 34px);
+  }
+}

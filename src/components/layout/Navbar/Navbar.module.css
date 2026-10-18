@@ -1,0 +1,116 @@
+.navShell {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(7, 15, 33, 0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(154, 183, 226, 0.08);
+}
+
+.nav {
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.brand:hover {
+  opacity: 0.9;
+}
+
+.brand img {
+  display: block;
+  width: 155px;
+  height: auto;
+}
+
+.navLinks {
+  display: flex;
+  gap: 30px;
+  color: #c1cbe0;
+  font-size: 14px;
+}
+
+.navLinks a {
+  transition: color 0.2s ease;
+}
+
+.navLinks a:hover {
+  color: #ffffff;
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menuToggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--line);
+  color: #ffffff;
+  border-radius: 12px;
+  width: 43px;
+  height: 43px;
+  font-size: 21px;
+  place-items: center;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.menuToggle:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #5e84c2;
+}
+
+@media (max-width: 680px) {
+  .nav {
+    height: 70px;
+  }
+
+  .brand img {
+    width: 130px;
+  }
+
+  .menuToggle {
+    display: grid;
+  }
+
+  .navLinks {
+    display: none;
+    position: absolute;
+    top: 69px;
+    left: 0;
+    right: 0;
+    padding: 15px 24px 22px;
+    background: rgba(7, 15, 33, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    gap: 0;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  .navLinks.open {
+    display: flex;
+  }
+
+  .navLinks a {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(154, 183, 226, 0.08);
+    font-size: 15px;
+  }
+
+  .navActions > .desktopBtn {
+    display: none;
+  }
+}

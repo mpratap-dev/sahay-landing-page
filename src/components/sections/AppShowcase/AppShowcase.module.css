@@ -1,0 +1,205 @@
+.section {
+  padding: 88px 0;
+}
+
+.productCarousel {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.carouselStage {
+  height: 720px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1400px;
+  isolation: isolate;
+  overflow: hidden;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.carouselCard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 290px;
+  margin: 0;
+  padding: 7px;
+  border: 1px solid rgba(154, 183, 226, 0.28);
+  border-radius: 29px;
+  background: linear-gradient(145deg, #172846, #091328);
+  box-shadow: 0 32px 85px rgba(0, 0, 0, 0.53);
+  transform: translate(-50%, -48%);
+  transition:
+    transform 0.65s cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 0.45s,
+    filter 0.45s;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.carouselCard img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+}
+
+.cardCaption {
+  padding: 13px 8px 9px;
+  text-align: left;
+}
+
+.cardCaption strong {
+  display: block;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.cardCaption span {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+.isActive {
+  z-index: 3;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  filter: none;
+  cursor: default;
+}
+
+.isPrev {
+  z-index: 2;
+  opacity: 0.62;
+  pointer-events: auto;
+  transform: translate(calc(-50% - 275px), -46%) scale(0.79) rotateY(10deg);
+  filter: saturate(0.75);
+}
+
+.isNext {
+  z-index: 2;
+  opacity: 0.62;
+  pointer-events: auto;
+  transform: translate(calc(-50% + 275px), -46%) scale(0.79) rotateY(-10deg);
+  filter: saturate(0.75);
+}
+
+.isHidden {
+  z-index: 0;
+  opacity: 0;
+  transform: translate(-50%, -40%) scale(0.7);
+  pointer-events: none;
+}
+
+.carouselControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.carouselArrow {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: #101e38;
+  color: #eef5ff;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.carouselArrow:hover {
+  background: #1b2d4b;
+  border-color: #5e84c2;
+  transform: translateY(-2px);
+}
+
+.carouselDots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.carouselDot {
+  width: 7px;
+  height: 7px;
+  border: 0;
+  padding: 0;
+  border-radius: 99px;
+  background: #50617d;
+  cursor: pointer;
+  transition:
+    width 0.3s ease,
+    background 0.3s ease;
+}
+
+.dotActive {
+  width: 25px;
+  background: linear-gradient(90deg, var(--blue), var(--teal));
+}
+
+.carouselStatus {
+  text-align: center;
+  color: #8d9db7;
+  font-size: 12px;
+  margin-top: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.galleryFootnote {
+  text-align: center;
+  color: #8190a9;
+  font-size: 12px;
+  margin-top: 17px;
+}
+
+@media (max-width: 680px) {
+  .section {
+    padding: 65px 0;
+  }
+
+  .carouselStage {
+    height: 540px;
+  }
+
+  .carouselCard {
+    width: min(255px, 68vw);
+    border-radius: 24px;
+  }
+
+  .carouselCard img {
+    border-radius: 18px;
+  }
+
+  .isPrev {
+    transform: translate(calc(-50% - 155px), -44%) scale(0.72) rotateY(8deg);
+    opacity: 0.48;
+  }
+
+  .isNext {
+    transform: translate(calc(-50% + 155px), -44%) scale(0.72) rotateY(-8deg);
+    opacity: 0.48;
+  }
+
+  .carouselControls {
+    gap: 15px;
+  }
+
+  .carouselArrow {
+    width: 39px;
+    height: 39px;
+  }
+}

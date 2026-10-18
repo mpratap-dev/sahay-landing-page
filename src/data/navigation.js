@@ -1,0 +1,13 @@
+export const NAV_LINKS = [
+  { label: 'Why SAHAY', href: '#why-sahay' },
+  { label: 'The app', href: '#see-it' },
+  { label: 'How it works', href: '#how-it-works' },
+  { label: "What's next", href: '#our-vision' },
+];
+
+export const FOOTER_LINKS = [
+  { label: 'Why SAHAY', href: '#why-sahay' },
+  { label: 'The app', href: '#see-it' },
+  { label: 'Our vision', href: '#our-vision' },
+  { label: 'FAQ', href: '#faq' },
+];

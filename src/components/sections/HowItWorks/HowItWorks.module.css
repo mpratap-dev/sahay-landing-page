@@ -1,0 +1,83 @@
+.section {
+  padding: 88px 0;
+}
+
+.howGrid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.howCopy h2 {
+  font-family: var(--serif);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  font-size: clamp(34px, 4vw, 49px);
+  line-height: 1.17;
+  margin: 16px 0;
+  color: var(--text);
+}
+
+.howCopy p {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.steps {
+  display: grid;
+  gap: 12px;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 15px;
+  padding: 19px;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  background: rgba(16, 30, 56, 0.65);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.step:hover {
+  transform: translateX(4px);
+  border-color: #5e84c2;
+  background: rgba(16, 30, 56, 0.9);
+}
+
+.stepNum {
+  font-family: var(--serif);
+  font-size: 23px;
+  color: #8dbdff;
+  line-height: 1;
+  padding-top: 2px;
+}
+
+.stepTitle {
+  font-size: 15px;
+  margin: 0 0 5px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.stepDesc {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .howGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 680px) {
+  .section {
+    padding: 65px 0;
+  }
+}
