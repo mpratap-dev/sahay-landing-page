@@ -15,4 +15,4 @@ Push to `main` (GitHub Actions → GitHub Pages) or run `npm run deploy`.
 
 `/feed/:id` is the share-link fallback: if Sahay is not installed, it sends people to the Play Store listing (`com.shaw.sahayy`). Android App Links verification reads `/.well-known/assetlinks.json`. After changing that file, confirm it is public JSON at `https://sahayy.in/.well-known/assetlinks.json` with no redirect.
 
-If Play App Signing is enabled, add the Play Console **App signing key** SHA-256 to `public/.well-known/assetlinks.json` (uppercase, no colons) in addition to the EAS upload fingerprint.
+If Play App Signing is enabled, add the Play Console **App signing key** SHA-256 to `public/.well-known/assetlinks.json` as colon-separated uppercase hex (`AA:BB:...`) in addition to the EAS upload fingerprint.
