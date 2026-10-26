@@ -3,12 +3,16 @@
 A responsive static landing page using the supplied SAHAY logo and real screenshots from the current app.
 
 ## Run locally
-Open `index.html` in a browser. No build step is required.
+
+```sh
+npm install
+npm run dev
+```
 
 ## Deploy
-Upload the complete folder, including `assets/`, to any static host (for example, Cloudflare Pages, Netlify, or GitHub Pages).
 
-## Before publishing
-- Add the official Play Store URL when the listing is live.
-- Add real contact, privacy-policy, and terms URLs.
-- Keep the civic assistance section labelled as a future direction until those features are available.
+Push to `main` (GitHub Actions → GitHub Pages) or run `npm run deploy`.
+
+`/feed/:id` is the share-link fallback: if Sahay is not installed, it sends people to the Play Store listing (`com.shaw.sahayy`). Android App Links verification reads `/.well-known/assetlinks.json`. After changing that file, confirm it is public JSON at `https://sahayy.in/.well-known/assetlinks.json` with no redirect.
+
+If Play App Signing is enabled, add the Play Console **App signing key** SHA-256 to `public/.well-known/assetlinks.json` (uppercase, no colons) in addition to the EAS upload fingerprint.

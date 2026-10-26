@@ -11,3 +11,11 @@ export const FOOTER_LINKS = [
   { label: 'Our vision', href: '#our-vision' },
   { label: 'FAQ', href: '#faq' },
 ];
+
+/** Hash anchors live on the marketing home; prefix so they work from /feed/:id. */
+export function toHomeHash(href) {
+  if (href.startsWith('#')) {
+    return `/${href}`;
+  }
+  return href;
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.shaw.sahayy",
+      "sha256_cert_fingerprints": [
+        "0DDED75A0646D71E85683374A4B72E80578B02C6B7813223A93F10C322BCC6F6"
+      ]
+    }
+  }
+]

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../../ui/Button/Button';
-import { NAV_LINKS } from '../../../data/navigation';
+import { NAV_LINKS, toHomeHash } from '../../../data/navigation';
 import logoImg from '../../../assets/images/sahay-logo.png';
 import styles from './Navbar.module.css';
 
@@ -19,16 +20,16 @@ export function Navbar() {
     <header className={styles.navShell}>
       <div className="wrap">
         <nav className={styles.nav} aria-label="Main navigation">
-          <a className={styles.brand} href="#top" aria-label="SAHAY home" onClick={closeMenu}>
+          <Link className={styles.brand} to="/" aria-label="SAHAY home" onClick={closeMenu}>
             <img src={logoImg} alt="SAHAY logo" width="155" height="42" />
-          </a>
+          </Link>
 
           <div
             className={`${styles.navLinks} ${isOpen ? styles.open : ''}`}
             id="navLinks"
           >
             {NAV_LINKS.map((link) => (
-              <a key={link.href} href={link.href} onClick={closeMenu}>
+              <a key={link.href} href={toHomeHash(link.href)} onClick={closeMenu}>
                 {link.label}
               </a>
             ))}
@@ -37,7 +38,7 @@ export function Navbar() {
           <div className={styles.navActions}>
             <Button
               variant="secondary"
-              href="#see-it"
+              href={toHomeHash('#see-it')}
               className={styles.desktopBtn}
               onClick={closeMenu}
             >
