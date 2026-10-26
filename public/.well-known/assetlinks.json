@@ -5,7 +5,8 @@
       "namespace": "android_app",
       "package_name": "com.shaw.sahayy",
       "sha256_cert_fingerprints": [
-        "0D:DE:D7:5A:06:46:D7:1E:85:68:33:74:A4:B7:2E:80:57:8B:02:C6:B7:81:32:23:A9:3F:10:C3:22:BC:C6:F6"
+        "0D:DE:D7:5A:06:46:D7:1E:85:68:33:74:A4:B7:2E:80:57:8B:02:C6:B7:81:32:23:A9:3F:10:C3:22:BC:C6:F6",
+        "98:D1:FB:4A:17:2B:10:A0:16:8A:6F:94:D1:15:B4:28:65:A2:FC:6B:2F:D5:AE:A2:DE:B2:7C:41:9B:57:24:C3"
       ]
     }
   }
