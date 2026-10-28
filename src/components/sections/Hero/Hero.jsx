@@ -14,7 +14,7 @@ export function Hero() {
             News for your world. <span className={styles.gradient}>Not more noise.</span>
           </h1>
           <p className={styles.heroCopy}>
-            Choose the topics you care about. SAHAY brings you concise,
+            Choose the topics you care about. SAHAYY brings you concise,
             curated news briefs, so you can keep up with what matters to you
             without an endless, overwhelming feed.
           </p>

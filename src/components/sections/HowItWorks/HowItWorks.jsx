@@ -13,7 +13,7 @@ export function HowItWorks() {
           <h2>Three steps to a more relevant feed.</h2>
           <p>
             You shouldn't have to work hard to stay informed. Start with what
-            matters to you and let SAHAY help you catch up.
+            matters to you and let SAHAYY help you catch up.
           </p>
         </div>
 

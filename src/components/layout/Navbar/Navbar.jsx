@@ -20,8 +20,8 @@ export function Navbar() {
     <header className={styles.navShell}>
       <div className="wrap">
         <nav className={styles.nav} aria-label="Main navigation">
-          <Link className={styles.brand} to="/" aria-label="SAHAY home" onClick={closeMenu}>
-            <img src={logoImg} alt="SAHAY logo" width="155" height="42" />
+          <Link className={styles.brand} to="/" aria-label="SAHAYY home" onClick={closeMenu}>
+            <img src={logoImg} alt="SAHAYY logo" width="155" height="42" />
           </Link>
 
           <div

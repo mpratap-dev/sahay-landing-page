@@ -9,7 +9,7 @@ export const SCREENSHOTS = [
   {
     id: 'sports',
     image: sportsImg,
-    alt: 'Real SAHAY screen showing a sports news brief and topic filters',
+    alt: 'Real SAHAYY screen showing a sports news brief and topic filters',
     title: 'Follow what you love',
     subtitle: 'Choose the topics that matter to you.',
     label: 'Personalised interests',
@@ -18,7 +18,7 @@ export const SCREENSHOTS = [
   {
     id: 'startups',
     image: startupsImg,
-    alt: 'Real SAHAY screen showing a startup news brief',
+    alt: 'Real SAHAYY screen showing a startup news brief',
     title: 'A feed shaped around you',
     subtitle: 'Explore stories across your interests.',
     label: 'Stories across topics',
@@ -27,7 +27,7 @@ export const SCREENSHOTS = [
   {
     id: 'delhi',
     image: delhiImg,
-    alt: 'Real SAHAY screen showing a Delhi-related news brief',
+    alt: 'Real SAHAYY screen showing a Delhi-related news brief',
     title: 'Keep an eye on your world',
     subtitle: 'Find local stories alongside wider news.',
     label: 'Local news, in context',
@@ -36,7 +36,7 @@ export const SCREENSHOTS = [
   {
     id: 'governance',
     image: governanceImg,
-    alt: 'Real SAHAY screen showing governance and policy briefs',
+    alt: 'Real SAHAYY screen showing governance and policy briefs',
     title: 'Policy and governance',
     subtitle: 'Key decisions and civic developments, simplified.',
     label: 'Civic & governance',
@@ -45,7 +45,7 @@ export const SCREENSHOTS = [
   {
     id: 'global-investing',
     image: globalInvestingImg,
-    alt: 'Real SAHAY screen showing financial and market updates',
+    alt: 'Real SAHAYY screen showing financial and market updates',
     title: 'Markets & global insights',
     subtitle: 'Clear summaries on economic and tech shifts.',
     label: 'Business & economy',
@@ -54,7 +54,7 @@ export const SCREENSHOTS = [
   {
     id: 'durga-puja',
     image: durgaPujaImg,
-    alt: 'Real SAHAY screen showing cultural festival stories',
+    alt: 'Real SAHAYY screen showing cultural festival stories',
     title: 'Culture and community',
     subtitle: 'Stories that connect people and celebrate traditions.',
     label: 'Culture & events',

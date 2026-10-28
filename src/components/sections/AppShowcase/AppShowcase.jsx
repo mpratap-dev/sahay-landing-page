@@ -53,14 +53,14 @@ export function AppShowcase() {
     <section className={styles.section} id="see-it">
       <div className="wrap">
         <SectionHead
-          eyebrow="See SAHAY in action"
+          eyebrow="See SAHAYY in action"
           title="Real screens. Real product."
-          description="These are actual screenshots from the SAHAY app, showing the news-card format and the topic filters that help shape your feed."
+          description="These are actual screenshots from the SAHAYY app, showing the news-card format and the topic filters that help shape your feed."
         />
 
         <div
           className={styles.productCarousel}
-          aria-label="SAHAY app screenshot carousel"
+          aria-label="SAHAYY app screenshot carousel"
           {...containerProps}
         >
           <div

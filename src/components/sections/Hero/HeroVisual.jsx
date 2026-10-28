@@ -9,7 +9,7 @@ export function HeroVisual() {
       <div className={styles.screenFrame}>
         <img
           src={sportsImg}
-          alt="Real SAHAY app screenshot showing a concise sports news brief and topic filters"
+          alt="Real SAHAYY app screenshot showing a concise sports news brief and topic filters"
           width="355"
           height="720"
         />

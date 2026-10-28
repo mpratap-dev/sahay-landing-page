@@ -8,8 +8,8 @@ export function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={`wrap ${styles.footerRow}`}>
-        <Link className={styles.footerBrand} to="/" aria-label="SAHAY home">
-          <img src={logoImg} alt="SAHAY logo" width="105" height="28" />
+        <Link className={styles.footerBrand} to="/" aria-label="SAHAYY home">
+          <img src={logoImg} alt="SAHAYY logo" width="105" height="28" />
         </Link>
         <div className={styles.tagline}>
           Personalised news, with a longer-term civic vision.

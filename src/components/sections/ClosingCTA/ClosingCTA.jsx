@@ -15,7 +15,7 @@ export function ClosingCTA() {
             sorting through noise.
           </p>
           <Button variant="primary" href="#see-it">
-            Take a look inside SAHAY ↗
+            Take a look inside SAHAYY ↗
           </Button>
         </div>
       </div>

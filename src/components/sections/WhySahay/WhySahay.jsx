@@ -17,7 +17,7 @@ export function WhySahay() {
               On your own terms.
             </>
           }
-          description="SAHAY is designed to make catching up feel simple, relevant and respectful of your time."
+          description="SAHAYY is designed to make catching up feel simple, relevant and respectful of your time."
         />
         <div className={styles.features}>
           {FEATURES.map((feature) => (

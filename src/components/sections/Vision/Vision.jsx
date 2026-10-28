@@ -16,7 +16,7 @@ export function Vision() {
             </h2>
             <p>
               We believe understanding what's happening is only one part of being
-              an informed citizen. Over time, SAHAY aims to make civic information
+              an informed citizen. Over time, SAHAYY aims to make civic information
               easier to navigate, helping people discover relevant public services
               and understand where to turn for support.
             </p>

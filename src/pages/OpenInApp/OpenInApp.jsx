@@ -11,10 +11,10 @@ export function OpenInApp() {
       <section className={styles.page}>
         <div className="wrap">
           <div className={styles.panel}>
-            <Eyebrow align="center">Open in SAHAY</Eyebrow>
+            <Eyebrow align="center">Open in SAHAYY</Eyebrow>
             <h1 className={styles.title}>This story is in the app.</h1>
             <p className={styles.description}>
-              Get SAHAY on Google Play to read this brief on your phone. If the
+              Get SAHAYY on Google Play to read this brief on your phone. If the
               app is already installed, this link should open it directly.
             </p>
             <div className={styles.actions}>
@@ -27,7 +27,7 @@ export function OpenInApp() {
                 Get it on Google Play <span aria-hidden="true">↗</span>
               </Button>
               <Button variant="secondary" href="/">
-                Back to SAHAY
+                Back to SAHAYY
               </Button>
             </div>
           </div>
