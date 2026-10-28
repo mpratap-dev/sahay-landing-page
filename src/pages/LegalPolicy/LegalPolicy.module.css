@@ -359,6 +359,10 @@
   margin-bottom: 1.25rem;
 }
 
+.officerLead a {
+  color: var(--teal);
+}
+
 .officerDetails {
   background: var(--panel2);
   border: 1px solid var(--line);

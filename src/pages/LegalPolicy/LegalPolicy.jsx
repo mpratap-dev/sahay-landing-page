@@ -51,7 +51,7 @@ const TRUST_PILLARS = [
     badge: '100% Cascade',
     title: 'Instant Self-Serve Erasure',
     description:
-      'You have the absolute right to delete your account and all associated locations, topics, and bookmarks anytime in Profile.',
+      'You have the absolute right to delete your account and all associated locations, topics, and bookmarks anytime in Profile or at /delete-account.',
   },
 ];
 
@@ -146,6 +146,7 @@ const POLICY_SECTIONS = [
       'We enforce strict data minimization and storage limitation. When you no longer need SAHAYY, deleting your data is instant, complete, and self-serve.',
     points: [
       'Self-Serve In-App Deletion: Navigate to Profile › Delete Account to permanently delete your account at any time.',
+      'Web deletion without the app: Open https://sahayy.in/delete-account, enter the Google email on your account, and confirm the code we send. Deletion is immediate.',
       'Complete Database Cascade: Upon confirming deletion, your User record, email, stored locations, interest areas, topic preferences, saved bookmarks, device push tokens, and notification delivery records are permanently wiped.',
       'Session Invalidation: All cryptographic refresh tokens and active identities are immediately revoked.',
       'Feedback Anonymization: Any submitted feedback messages are permanently detached from your user identity.',
@@ -173,7 +174,7 @@ const POLICY_SECTIONS = [
     points: [
       'Right to Access Information (Section 11): Right to obtain a summary of your personal data being processed and third parties with whom it has been shared.',
       'Right to Correction & Updating (Section 12): Right to correct inaccurate data or update outdated personal details.',
-      'Right to Erasure (Section 12): Right to have your personal data permanently erased using our in-app deletion tool.',
+      'Right to Erasure (Section 12): Right to have your personal data permanently erased using our in-app deletion tool or the web deletion page at https://sahayy.in/delete-account.',
       'Right of Grievance Redressal (Section 13): Right to readily available grievance redressal from our designated Grievance Officer.',
       'Right to Nominate (Section 14): Right to designate an individual to exercise your data rights in the event of death or incapacity.',
       'Right to Escalate to DPBI: If unresolved by our Grievance Officer, you have the right to lodge a complaint with the Data Protection Board of India.',
@@ -213,8 +214,8 @@ const DATA_SAFETY = [
   { field: 'Display Name', category: 'Identity & Profile', purpose: 'In-app profile display', shared: 'Never shared', retention: 'Deleted upon account closure' },
   { field: 'Profile Image URL', category: 'Identity & Profile', purpose: 'User avatar rendering', shared: 'Never shared', retention: 'Deleted upon account closure' },
   { field: 'Phone Number', category: 'Identity & Profile', purpose: 'SMS OTP authentication', shared: 'MSG91 (SMS OTP only)', retention: 'Deleted upon account closure' },
-  { field: 'Precise GPS Coordinates', category: 'Location', purpose: 'Hyper-local news & civic alerts', shared: 'Google Maps API (reverse-geocode)', retention: 'Updated / deleted on request' },
-  { field: 'Civic Address / PIN Code', category: 'Location', purpose: 'Ward & district filtering', shared: 'Never shared', retention: 'Updated / deleted on request' },
+  { field: 'Precise GPS Coordinates', category: 'Location', purpose: 'Hyper-local news & civic alerts', shared: 'Google Maps API (reverse-geocode)', retention: 'Deleted upon account closure' },
+  { field: 'Civic Address / PIN Code', category: 'Location', purpose: 'Ward & district filtering', shared: 'Never shared', retention: 'Deleted upon account closure' },
   { field: 'Interest Areas & Topics', category: 'Preferences', purpose: 'Content curation & topic filtering', shared: 'Never shared', retention: 'Deleted upon account closure' },
   { field: 'Saved Bookmarks', category: 'App Activity', purpose: 'Citizen bookmarking', shared: 'Never shared', retention: 'Deleted on user action' },
   { field: 'Device ID & Tokens', category: 'Technical Security', purpose: 'Session security & anti-abuse', shared: 'Never shared', retention: 'Invalidated on logout/deletion' },
@@ -353,7 +354,8 @@ export function PrivacyPolicy() {
                 <h2 id="officer-heading" className={styles.officerTitle}>Grievance Redressal Officer</h2>
               </div>
               <p className={styles.officerLead}>
-                For grievances, data deletion requests, or to obtain this policy in Hindi or any Eighth Schedule official language, reach out directly:
+                For grievances, data deletion requests, or to obtain this policy in Hindi or any Eighth Schedule official language, reach out directly. You can also delete your account yourself on the{' '}
+                <Link to="/delete-account">delete account</Link> page.
               </p>
               <div className={styles.officerDetails}>
                 <div className={styles.officerField}>
