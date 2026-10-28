@@ -3,7 +3,7 @@ import { dirname, resolve } from 'node:path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-const GITHUB_PAGES_STATIC_ROUTES = ['privacy-policy', 'delete-account'];
+const GITHUB_PAGES_STATIC_ROUTES = ['privacy-policy', 'delete-account', 'contact'];
 
 function githubPagesSpaFallback() {
   return {

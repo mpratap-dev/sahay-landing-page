@@ -12,6 +12,7 @@ export const FOOTER_LINKS = [
   { label: 'FAQ', href: '#faq' },
   { label: 'Privacy Policy', href: '/privacy-policy', absolute: true },
   { label: 'Delete account', href: '/delete-account', absolute: true },
+  { label: 'Contact', href: '/contact', absolute: true },
 ];
 
 /** Hash anchors live on the marketing home; prefix so they work from /feed/:id. */
