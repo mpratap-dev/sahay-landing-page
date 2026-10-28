@@ -17,4 +17,6 @@ Push to `main` (GitHub Actions → GitHub Pages) or run `npm run deploy`.
 
 `/delete-account` is the Play Console account-deletion URL (`https://sahayy.in/delete-account`). Copy `.env.example` to `.env.development` for local `npm run dev`. GitHub Pages builds inject `VITE_API_URL` from an Actions **variable** (not a secret): repo **Settings → Secrets and variables → Actions → Variables → New repository variable**, name `VITE_API_URL`, value `https://sahay-backend-42jz.onrender.com`. You can instead set it on the `github-pages` environment. The deploy workflow already falls back to that URL if the variable is unset. The API must allow `https://sahayy.in` in `CORS_ORIGINS`.
 
+The Vite plugin copies `index.html` into `privacy-policy/` and `delete-account/` so GitHub Pages returns HTTP 200 for those Play Console URLs. Add new static routes to `GITHUB_PAGES_STATIC_ROUTES` in `vite.config.js`.
+
 If Play App Signing is enabled, add the Play Console **App signing key** SHA-256 to `public/.well-known/assetlinks.json` as colon-separated uppercase hex (`AA:BB:...`) in addition to the EAS upload fingerprint.
