@@ -15,11 +15,17 @@ export function Footer() {
           Personalised news, with a longer-term civic vision.
         </div>
         <div className={styles.footerLinks}>
-          {FOOTER_LINKS.map((link) => (
-            <a key={link.href} href={toHomeHash(link.href)}>
-              {link.label}
-            </a>
-          ))}
+          {FOOTER_LINKS.map((link) =>
+            link.absolute ? (
+              <Link key={link.href} to={link.href}>
+                {link.label}
+              </Link>
+            ) : (
+              <a key={link.href} href={toHomeHash(link.href)}>
+                {link.label}
+              </a>
+            )
+          )}
         </div>
       </div>
     </footer>

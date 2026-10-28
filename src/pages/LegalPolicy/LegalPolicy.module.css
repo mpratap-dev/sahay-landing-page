@@ -1,0 +1,497 @@
+/* ── Page wrapper ──────────────────────────────────────────────────────── */
+.page {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+/* ── Back link ─────────────────────────────────────────────────────────── */
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+  margin-bottom: 2.5rem;
+}
+.backLink:hover {
+  color: var(--teal);
+}
+
+/* ── Hero header ───────────────────────────────────────────────────────── */
+.hero {
+  margin-bottom: 3.5rem;
+}
+
+.complianceBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal);
+  background: rgba(20, 216, 198, 0.1);
+  border: 1px solid rgba(20, 216, 198, 0.25);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--teal);
+  display: inline-block;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.6; transform: scale(0.85); }
+}
+
+.heroTitle {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.heroMeta {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ── Section wrapper ───────────────────────────────────────────────────── */
+.section {
+  margin-bottom: 3.5rem;
+}
+
+.sectionHeading {
+  font-family: var(--sans);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+}
+
+/* ── Trust pillars grid ────────────────────────────────────────────────── */
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.pillarCard {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.25rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.pillarCard:hover {
+  border-color: var(--teal);
+  transform: translateY(-2px);
+}
+
+.pillarBadge {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--teal);
+  background: rgba(20, 216, 198, 0.1);
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  margin-bottom: 0.75rem;
+}
+
+.pillarTitle {
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.pillarDesc {
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ── Accordion ─────────────────────────────────────────────────────────── */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.card:focus-within {
+  border-color: var(--blue);
+}
+
+.cardHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 1rem 1.25rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: var(--text);
+  transition: background 0.15s;
+}
+.cardHeader:hover {
+  background: var(--panel2);
+}
+
+.sectionNum {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--teal);
+  min-width: 1.75rem;
+  background: rgba(20, 216, 198, 0.1);
+  border-radius: 6px;
+  padding: 0.1rem 0.4rem;
+  text-align: center;
+}
+
+.cardTitle {
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  flex: 1;
+}
+
+.chevron {
+  font-size: 1.2rem;
+  color: var(--muted);
+  transition: transform 0.25s;
+  display: inline-block;
+  line-height: 1;
+}
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.cardBody {
+  padding: 0 1.25rem 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.summary {
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.callout {
+  background: rgba(59, 130, 246, 0.1);
+  border-left: 3px solid var(--blue);
+  border-radius: 0 8px 8px 0;
+  padding: 0.75rem 1rem;
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.pointsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.pointsList li {
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  color: var(--muted);
+  line-height: 1.65;
+  padding-left: 1.25rem;
+  position: relative;
+}
+.pointsList li::before {
+  content: '·';
+  position: absolute;
+  left: 0.35rem;
+  color: var(--teal);
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+/* ── Data safety table ─────────────────────────────────────────────────── */
+.tableLead {
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+
+.safetyTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+}
+
+.safetyTable thead tr {
+  background: var(--panel2);
+}
+
+.safetyTable th {
+  padding: 0.875rem 1rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.safetyTable td {
+  padding: 0.8rem 1rem;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  vertical-align: middle;
+}
+
+.safetyTable tbody tr:hover {
+  background: var(--panel2);
+}
+
+.safetyTable td strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.chipGreen {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.1);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  white-space: nowrap;
+}
+
+.chipBlue {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--blue);
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  white-space: nowrap;
+}
+
+/* ── Grievance Officer card ─────────────────────────────────────────────── */
+.officerCard {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.75rem;
+}
+
+.officerHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.mailIcon {
+  width: 22px;
+  height: 22px;
+  color: var(--blue);
+  flex-shrink: 0;
+}
+
+.officerTitle {
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.officerLead {
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+
+.officerDetails {
+  background: var(--panel2);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-bottom: 1.25rem;
+}
+
+.officerField {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  font-size: 0.8125rem;
+}
+
+.officerLabel {
+  font-family: var(--sans);
+  font-weight: 600;
+  color: var(--muted);
+  min-width: 150px;
+  flex-shrink: 0;
+}
+
+.officerValue {
+  font-family: var(--sans);
+  color: var(--text);
+}
+
+.officerEmail {
+  font-family: var(--sans);
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.officerEmail:hover {
+  color: var(--teal);
+}
+
+.emailBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--blue);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.15s;
+}
+.emailBtn:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+.emailBtn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ── Footer note ───────────────────────────────────────────────────────── */
+.footerNote {
+  text-align: center;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  color: var(--muted);
+  opacity: 0.6;
+  padding-top: 2rem;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 680px) {
+  .page {
+    padding-top: 4.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .pillarsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Responsive table for mobile */
+  .safetyTable thead {
+    display: none;
+  }
+  .safetyTable,
+  .safetyTable tbody,
+  .safetyTable tr,
+  .safetyTable td {
+    display: block;
+    width: 100%;
+  }
+  .safetyTable tr {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem;
+    background: var(--panel);
+  }
+  .safetyTable td {
+    border: none;
+    padding: 0.4rem 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+  }
+  .safetyTable td::before {
+    content: attr(data-label) ': ';
+    font-weight: 700;
+    font-size: 0.7rem;
+    color: var(--muted);
+    min-width: 90px;
+    flex-shrink: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .officerLabel {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pillarsGrid {
+    grid-template-columns: 1fr;
+  }
+  .officerField {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}

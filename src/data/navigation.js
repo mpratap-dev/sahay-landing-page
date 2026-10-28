@@ -10,6 +10,7 @@ export const FOOTER_LINKS = [
   { label: 'The app', href: '#see-it' },
   { label: 'Our vision', href: '#our-vision' },
   { label: 'FAQ', href: '#faq' },
+  { label: 'Privacy Policy', href: '/privacy-policy', absolute: true },
 ];
 
 /** Hash anchors live on the marketing home; prefix so they work from /feed/:id. */
