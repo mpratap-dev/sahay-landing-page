@@ -1,9 +1,8 @@
 import sportsImg from '../assets/images/news-sports.png';
-import startupsImg from '../assets/images/news-startups.png';
+import gptImg from '../assets/images/news-gpt.png';
 import delhiImg from '../assets/images/news-delhi.png';
-import governanceImg from '../assets/images/news-governance.png';
-import globalInvestingImg from '../assets/images/news-global-investing.png';
-import durgaPujaImg from '../assets/images/news-durga-puja.png';
+import scienceImg from '../assets/images/news-science.png';
+import startupImg from '../assets/images/news-startup.png';
 
 export const SCREENSHOTS = [
   {
@@ -11,53 +10,44 @@ export const SCREENSHOTS = [
     image: sportsImg,
     alt: 'Real SAHAYY screen showing a sports news brief and topic filters',
     title: 'Follow what you love',
-    subtitle: 'Choose the topics that matter to you.',
-    label: 'Personalised interests',
+    subtitle: 'Cricket, sports updates, and the moments that matter.',
+    label: 'Sports & updates',
     actionLabel: 'Show sports news screen',
   },
   {
-    id: 'startups',
-    image: startupsImg,
-    alt: 'Real SAHAYY screen showing a startup news brief',
-    title: 'A feed shaped around you',
-    subtitle: 'Explore stories across your interests.',
-    label: 'Stories across topics',
-    actionLabel: 'Show startups news screen',
+    id: 'ai',
+    image: gptImg,
+    alt: 'Real SAHAYY screen showing frontier AI research news about OpenAI and Anthropic models',
+    title: 'Frontier AI & tech',
+    subtitle: 'Breakthrough research and technological shifts, unpacked.',
+    label: 'AI & technology',
+    actionLabel: 'Show AI and technology news screen',
   },
   {
     id: 'delhi',
     image: delhiImg,
-    alt: 'Real SAHAYY screen showing a Delhi-related news brief',
-    title: 'Keep an eye on your world',
-    subtitle: 'Find local stories alongside wider news.',
+    alt: 'Real SAHAYY screen showing Delhi city news and metro updates',
+    title: 'Keep an eye on your city',
+    subtitle: 'Local reports and city headlines alongside national news.',
     label: 'Local news, in context',
     actionLabel: 'Show local news screen',
   },
   {
-    id: 'governance',
-    image: governanceImg,
-    alt: 'Real SAHAYY screen showing governance and policy briefs',
-    title: 'Policy and governance',
-    subtitle: 'Key decisions and civic developments, simplified.',
-    label: 'Civic & governance',
-    actionLabel: 'Show governance news screen',
+    id: 'science',
+    image: scienceImg,
+    alt: 'Real SAHAYY screen showing government science policy and research draft rules',
+    title: 'Science & regulation',
+    subtitle: 'Key research rules and policy developments, simplified.',
+    label: 'Science & policy',
+    actionLabel: 'Show science news screen',
   },
   {
-    id: 'global-investing',
-    image: globalInvestingImg,
-    alt: 'Real SAHAYY screen showing financial and market updates',
-    title: 'Markets & global insights',
-    subtitle: 'Clear summaries on economic and tech shifts.',
-    label: 'Business & economy',
-    actionLabel: 'Show business news screen',
-  },
-  {
-    id: 'durga-puja',
-    image: durgaPujaImg,
-    alt: 'Real SAHAYY screen showing cultural festival stories',
-    title: 'Culture and community',
-    subtitle: 'Stories that connect people and celebrate traditions.',
-    label: 'Culture & events',
-    actionLabel: 'Show cultural news screen',
+    id: 'startups',
+    image: startupImg,
+    alt: 'Real SAHAYY screen showing deep-tech startup news on fusion energy development',
+    title: 'Startups & deep tech',
+    subtitle: 'Venture funding, breakthrough hardware, and founder stories.',
+    label: 'Startups & innovation',
+    actionLabel: 'Show startups news screen',
   },
 ];

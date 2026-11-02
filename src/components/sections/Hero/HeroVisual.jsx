@@ -1,5 +1,5 @@
 import React from 'react';
-import sportsImg from '../../../assets/images/news-sports.png';
+import sportsImg from '../../../assets/images/news-gpt.png';
 import styles from './Hero.module.css';
 
 export function HeroVisual() {
