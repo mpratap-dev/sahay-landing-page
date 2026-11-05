@@ -6,6 +6,7 @@ import AppShowcase from './components/sections/AppShowcase/AppShowcase';
 import HowItWorks from './components/sections/HowItWorks/HowItWorks';
 import Vision from './components/sections/Vision/Vision';
 import FAQ from './components/sections/FAQ/FAQ';
+import DownloadApp from './components/sections/DownloadApp/DownloadApp';
 import ClosingCTA from './components/sections/ClosingCTA/ClosingCTA';
 
 export function App() {
@@ -17,6 +18,7 @@ export function App() {
       <HowItWorks />
       <Vision />
       <FAQ />
+      <DownloadApp />
       <ClosingCTA />
     </SiteLayout>
   );
