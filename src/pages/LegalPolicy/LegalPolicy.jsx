@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SiteLayout from '../../components/layout/SiteLayout/SiteLayout';
+import { analyticsProcessorName } from '../../analytics-processor-name';
 import styles from './LegalPolicy.module.css';
+
+const analyticsProcessor = analyticsProcessorName();
+const analyticsRetention = `Until the grievance officer deletes them or the ${analyticsProcessor} retention window ends, whichever comes first`;
 
 /* ─── Data (mirrors privacy-policy-data.ts in the RN app) ─────────────── */
 
 const META = {
-  VERSION: '1.0.0',
-  EFFECTIVE_DATE: 'October 8, 2026',
-  LAST_UPDATED: 'October 8, 2026',
+  VERSION: '1.1.0',
+  EFFECTIVE_DATE: 'November 6, 2026',
+  LAST_UPDATED: 'November 6, 2026',
   COMPLIANCE_LABEL: 'DPDP Act, 2023 Compliant',
   GOVERNING_STATUTE: 'Digital Personal Data Protection Act, 2023 & IT Act, 2000',
 };
@@ -82,6 +86,8 @@ const POLICY_SECTIONS = [
       'Saved Bookmarks: Content items, advisories, and articles you save for later reading.',
       'User Feedback: Feedback messages and categories submitted via the app or upon account closure.',
       'Technical Session Security: Cryptographically hashed refresh tokens (SHA-256), device identifiers, and ephemeral IP logs for anti-abuse and rate-limiting.',
+      'Product Analytics: An internal user id only. We do not send your name, email, or phone. Events cover app opens, daily brief opens, topic chips you select, card ids you view, swipe counts, and session length. Search text is not included.',
+      'Session Recordings: Production builds can record a sample of in-app screenshots. Sign-in, onboarding, profile, interests, grievance, feedback, delete-account, and the search field are masked. Feed text and images can appear. Development builds do not record sessions.',
     ],
   },
   {
@@ -97,6 +103,7 @@ const POLICY_SECTIONS = [
       'Disaster & Weather Warnings: Broadcasting official IMD severe weather, flash flood, and air quality (AQI) alerts based on your coordinates.',
       'Future Civic Services: Connecting citizens directly with their ward representatives, municipal helplines, localized grievance redressal, and neighborhood civic resolution tracking.',
       'Granular User Controls: Location access is requested explicitly through your device OS dialog. You can change your location or revoke permissions anytime in device settings.',
+      'Session Recordings: Precise GPS coordinates are not sent to our analytics provider. A production recording of the feed can show the area name already on the location chip. Recordings are not used for advertising and are not sold.',
     ],
   },
   {
@@ -108,6 +115,7 @@ const POLICY_SECTIONS = [
     points: [
       'Consent as Primary Basis: You provide free, specific, informed, and unambiguous consent when registering, granting location permissions, and selecting civic interests.',
       'Withdrawal of Consent: You have the right to withdraw your consent at any time without negative consequences to existing lawful processing.',
+      'Product Analytics Withdrawal: Deleting your account, or emailing the grievance officer, stops further analytics and session recording on that device. The app does not offer a separate analytics switch.',
       'Statutory Cybersecurity Compliance: Security logs are temporarily maintained to satisfy CERT-In cybersecurity directives under Section 70B of the IT Act, 2000.',
     ],
   },
@@ -123,38 +131,53 @@ const POLICY_SECTIONS = [
       'MSG91 (India): Used strictly for transactional SMS OTP delivery to Indian mobile numbers.',
       'Resend: Used strictly for transactional email OTP delivery and security notices.',
       'Cloud Database & Redis: Encrypted databases and in-memory caches hosted in compliant, isolated cloud environments.',
+      `${analyticsProcessor}: Used only for product analytics and session replay. We do not sell this data and we do not use it for advertising. The project host is in the United States or the European Union, matching the host configured for that app build.`,
       'Law Enforcement Disclosures: Shared with Indian law enforcement only when strictly mandated by a valid court order or statutory warrant issued under applicable Indian laws.',
     ],
   },
   {
-    id: 'ai-transparency',
+    id: 'product-analytics',
     num: '06',
+    title: 'Product Analytics & Session Recordings',
+    summary:
+      `SAHAYY uses ${analyticsProcessor} to understand which briefs, topics, and cards are useful. This is separate from AI summarization.`,
+    points: [
+      'Production builds can record sampled sessions. Development builds do not.',
+      'Personal screens are masked: sign-in, onboarding, profile, interests, grievance, feedback, and delete account. The search field is masked. Feed text and images stay visible.',
+      `Name, email, phone, search text, and precise GPS coordinates are not sent to ${analyticsProcessor}.`,
+      `Reading activity sent to ${analyticsProcessor} is not sent to an external AI provider for model training.`,
+    ],
+  },
+  {
+    id: 'ai-transparency',
+    num: '07',
     title: 'AI Summarization & Citizen Privacy',
     summary:
       'SAHAYY uses Large Language Models (LLMs) to synthesize complex news articles and government gazettes into concise civic bullet briefs.',
     points: [
       'Public Data Only: AI summarization operates exclusively on publicly accessible publisher news feeds, RSS feeds, and official government press releases.',
-      'Zero Model Training on Citizen Data: Your personal profile, email, name, location, and reading habits are NEVER transmitted to external AI providers for model training or fine-tuning.',
+      'Zero Model Training on Citizen Data: Your personal profile, email, name, location, and reading habits are NEVER transmitted to external AI providers for model training or fine-tuning. Product analytics described above is a separate processor and is not an AI training feed.',
       'Source Attribution: All AI summaries clearly link back to the original source publisher with full transparency.',
     ],
   },
   {
     id: 'retention-and-deletion',
-    num: '07',
+    num: '08',
     title: 'Data Retention & Instant Account Deletion',
     summary:
-      'We enforce strict data minimization and storage limitation. When you no longer need SAHAYY, deleting your data is instant, complete, and self-serve.',
+      `Deleting your account immediately removes the personal data Sahay stores. Analytics copies held by ${analyticsProcessor} follow the retention described below.`,
     points: [
       'Self-Serve In-App Deletion: Navigate to Profile › Delete Account to permanently delete your account at any time.',
       'Web deletion without the app: Open https://sahayy.in/delete-account, enter the Google email on your account, and confirm the code we send. Deletion is immediate.',
       'Complete Database Cascade: Upon confirming deletion, your User record, email, stored locations, interest areas, topic preferences, saved bookmarks, device push tokens, and notification delivery records are permanently wiped.',
       'Session Invalidation: All cryptographic refresh tokens and active identities are immediately revoked.',
       'Feedback Anonymization: Any submitted feedback messages are permanently detached from your user identity.',
+      `${analyticsProcessor} copies: Account deletion stops that device from sending further events as you. Events and recordings already stored at ${analyticsProcessor} stay until the grievance officer deletes them, or until the ${analyticsProcessor} project retention window ends, whichever comes first. The app cannot delete those copies with its public project key.`,
     ],
   },
   {
     id: 'security-measures',
-    num: '08',
+    num: '09',
     title: 'Security Safeguards & Practices',
     summary:
       'In compliance with Rule 8 of the IT (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011 and Section 8(5) of the DPDP Act 2023, we deploy industry-standard safeguards.',
@@ -167,7 +190,7 @@ const POLICY_SECTIONS = [
   },
   {
     id: 'citizen-rights',
-    num: '09',
+    num: '10',
     title: 'Your Rights as a Data Principal',
     summary:
       'Under Sections 11 through 14 of the DPDP Act 2023, you possess enforceable statutory rights regarding your digital personal data.',
@@ -182,19 +205,19 @@ const POLICY_SECTIONS = [
   },
   {
     id: 'children-privacy',
-    num: '10',
+    num: '11',
     title: 'Protection of Children',
     summary:
       'SAHAYY is committed to protecting the privacy of minors in strict alignment with Section 9 of the DPDP Act 2023.',
     points: [
-      'SAHAYY does not engage in behavioral monitoring, tracking, or targeted advertising directed at children under the age of 18.',
+      'SAHAYY does not engage in behavioral monitoring, tracking, or targeted advertising directed at children under the age of 18. Product analytics is not directed at children and is not used for advertising.',
       'If you are under 18 years of age, you should use the application with the guidance and consent of a parent or lawful guardian.',
       'Parents or guardians who believe their child has submitted personal data without consent may contact our Grievance Officer for immediate erasure.',
     ],
   },
   {
     id: 'grievance-contact',
-    num: '11',
+    num: '12',
     title: 'Grievance Redressal Officer Contact',
     summary:
       'In compliance with Rule 5(9) of the SPDI Rules 2011, Rule 3(2) of the Intermediary Guidelines 2021, and Section 8(9) of the DPDP Act 2023, our designated Grievance Officer details are published below:',
@@ -219,6 +242,10 @@ const DATA_SAFETY = [
   { field: 'Interest Areas & Topics', category: 'Preferences', purpose: 'Content curation & topic filtering', shared: 'Never shared', retention: 'Deleted upon account closure' },
   { field: 'Saved Bookmarks', category: 'App Activity', purpose: 'Citizen bookmarking', shared: 'Never shared', retention: 'Deleted on user action' },
   { field: 'Device ID & Tokens', category: 'Technical Security', purpose: 'Session security & anti-abuse', shared: 'Never shared', retention: 'Invalidated on logout/deletion' },
+  { field: 'Product Analytics Events', category: 'App Activity', purpose: 'Product analytics: app opens, brief opens, topics, card ids, swipe counts, session length', shared: `${analyticsProcessor} (product analytics)`, retention: analyticsRetention },
+  { field: 'Internal User ID', category: 'Technical', purpose: 'Link product analytics to an account without name, email, or phone', shared: `${analyticsProcessor} (product analytics)`, retention: analyticsRetention },
+  { field: 'Analytics Install ID', category: 'Technical', purpose: 'The analytics processor assigns an install id before sign-in. This is separate from Sahay session tokens and push tokens.', shared: `${analyticsProcessor} (product analytics)`, retention: analyticsRetention },
+  { field: 'Session Recordings', category: 'App Activity', purpose: 'Sampled production screenshots of in-app use. Personal screens and search are masked. A recording can show the area name on the location chip.', shared: `${analyticsProcessor} (session replay)`, retention: analyticsRetention },
 ];
 
 /* ─── Accordion Section Card ────────────────────────────────────────────── */

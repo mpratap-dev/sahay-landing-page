@@ -2,9 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../../components/ui/Button/Button';
 import SiteLayout from '../../components/layout/SiteLayout/SiteLayout';
+import { analyticsProcessorName } from '../../analytics-processor-name';
 import { FORM_STEP, useDeleteAccount } from './use-delete-account';
 import styles from './DeleteAccount.module.css';
 
+const analyticsProcessor = analyticsProcessorName();
 const APP_NAME = 'SAHAYY';
 const DEVELOPER_NAME = 'SHAW Technologies Private Limited';
 
@@ -21,6 +23,7 @@ const DELETED_ON_CONFIRM = [
 const KEPT_AFTER_DELETE = [
   'Feedback messages, with your user id removed so they are no longer linked to you',
   'Public news and civic content, which is not personal data',
+  `Product analytics events and session recordings held by ${analyticsProcessor}. Deleting your account stops that device from sending more events as you. Those copies stay until you email the grievance officer at support@sahayy.in, or until the ${analyticsProcessor} project retention window ends, whichever comes first`,
 ];
 
 export function DeleteAccount() {
