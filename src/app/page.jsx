@@ -19,7 +19,6 @@ export default function HomePage() {
       <Vision />
       <FAQ />
       <DownloadApp />
-      <ClosingCTA />
     </SiteLayout>
   );
 }
