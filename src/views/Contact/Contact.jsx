@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import SiteLayout from '../../components/layout/SiteLayout/SiteLayout';
 import styles from './Contact.module.css';
 
@@ -110,7 +110,7 @@ export function Contact() {
     <SiteLayout mainId="contact-top">
       <div className={styles.page}>
         <div className="wrap">
-          <Link to="/" className={styles.backLink}>
+          <Link href="/" className={styles.backLink}>
             ← Back to home
           </Link>
 
@@ -189,7 +189,7 @@ export function Contact() {
           {/* Footer note */}
           <p className={styles.footerNote}>
             SAHAYY Platform · Smart Access &amp; Holistic Assistance for You ·{' '}
-            <Link to="/privacy-policy" className={styles.footerLink}>
+            <Link href="/privacy-policy" className={styles.footerLink}>
               Privacy Policy
             </Link>
           </p>

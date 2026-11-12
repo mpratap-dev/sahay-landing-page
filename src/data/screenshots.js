@@ -7,7 +7,7 @@ import startupImg from '../assets/images/news-startup.png';
 export const SCREENSHOTS = [
   {
     id: 'sports',
-    image: sportsImg,
+    image: sportsImg.src || sportsImg,
     alt: 'Real SAHAYY screen showing a sports news brief and topic filters',
     title: 'Follow what you love',
     subtitle: 'Cricket, sports updates, and the moments that matter.',
@@ -16,7 +16,7 @@ export const SCREENSHOTS = [
   },
   {
     id: 'ai',
-    image: gptImg,
+    image: gptImg.src || gptImg,
     alt: 'Real SAHAYY screen showing frontier AI research news about OpenAI and Anthropic models',
     title: 'Frontier AI & tech',
     subtitle: 'Breakthrough research and technological shifts, unpacked.',
@@ -25,7 +25,7 @@ export const SCREENSHOTS = [
   },
   {
     id: 'delhi',
-    image: delhiImg,
+    image: delhiImg.src || delhiImg,
     alt: 'Real SAHAYY screen showing Delhi city news and metro updates',
     title: 'Keep an eye on your city',
     subtitle: 'Local reports and city headlines alongside national news.',
@@ -34,7 +34,7 @@ export const SCREENSHOTS = [
   },
   {
     id: 'science',
-    image: scienceImg,
+    image: scienceImg.src || scienceImg,
     alt: 'Real SAHAYY screen showing government science policy and research draft rules',
     title: 'Science & regulation',
     subtitle: 'Key research rules and policy developments, simplified.',
@@ -43,7 +43,7 @@ export const SCREENSHOTS = [
   },
   {
     id: 'startups',
-    image: startupImg,
+    image: startupImg.src || startupImg,
     alt: 'Real SAHAYY screen showing deep-tech startup news on fusion energy development',
     title: 'Startups & deep tech',
     subtitle: 'Venture funding, breakthrough hardware, and founder stories.',

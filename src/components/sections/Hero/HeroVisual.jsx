@@ -8,7 +8,7 @@ export function HeroVisual() {
       <div className={styles.glow} aria-hidden="true" />
       <div className={styles.screenFrame}>
         <img
-          src={sportsImg}
+          src={sportsImg?.src || sportsImg}
           alt="Real SAHAYY app screenshot showing a concise sports news brief and topic filters"
           width="355"
           height="720"

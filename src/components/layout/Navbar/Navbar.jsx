@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import Button from '../../ui/Button/Button';
 import { NAV_LINKS, toHomeHash } from '../../../data/navigation';
 import logoImg from '../../../assets/images/sahay-logo.png';
@@ -20,8 +22,8 @@ export function Navbar() {
     <header className={styles.navShell}>
       <div className="wrap">
         <nav className={styles.nav} aria-label="Main navigation">
-          <Link className={styles.brand} to="/" aria-label="SAHAYY home" onClick={closeMenu}>
-            <img src={logoImg} alt="SAHAYY logo" width="155" height="42" />
+          <Link className={styles.brand} href="/" aria-label="SAHAYY home" onClick={closeMenu}>
+            <img src={logoImg?.src || logoImg} alt="SAHAYY logo" width="155" height="42" />
           </Link>
 
           <div
@@ -36,7 +38,7 @@ export function Navbar() {
           </div>
 
           <div className={styles.navActions}>
-            <Link to="https://play.google.com/store/apps/details?id=com.shaw.sahayy" target="_blank" aria-label="SAHAYY play store">
+            <Link href="https://play.google.com/store/apps/details?id=com.shaw.sahayy" target="_blank" aria-label="SAHAYY play store">
               <Button
                 variant="secondary"
                 className={styles.desktopBtn}

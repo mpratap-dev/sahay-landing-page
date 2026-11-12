@@ -36,7 +36,7 @@ jobs:
       - name: Build project
         run: npm run build
         env:
-          VITE_API_URL: "${{ vars.VITE_API_URL || 'https://sahay-backend-42jz.onrender.com' }}"
+          NEXT_PUBLIC_API_URL: "${{ vars.NEXT_PUBLIC_API_URL || vars.VITE_API_URL || 'https://sahay-backend-42jz.onrender.com' }}"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -44,7 +44,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: './out'
 
       - name: Deploy to GitHub Pages
         id: deployment

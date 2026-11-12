@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import Button from '../../components/ui/Button/Button';
 import SiteLayout from '../../components/layout/SiteLayout/SiteLayout';
 import { analyticsProcessorName } from '../../analytics-processor-name';
@@ -45,7 +47,7 @@ export function DeleteAccount() {
     <SiteLayout mainId="delete-account-top">
       <div className={styles.page}>
         <div className="wrap">
-          <Link to="/" className={styles.backLink}>
+          <Link href="/" className={styles.backLink}>
             ← Back to home
           </Link>
 
@@ -184,7 +186,7 @@ export function DeleteAccount() {
 
             <p className={styles.policy}>
               See the{' '}
-              <Link to="/privacy-policy">privacy policy</Link> for the full
+              <Link href="/privacy-policy">privacy policy</Link> for the full
               data inventory.
             </p>
           </section>

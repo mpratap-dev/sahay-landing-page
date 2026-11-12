@@ -7,7 +7,7 @@ export const FORM_STEP = {
 };
 
 function apiBaseUrl() {
-  const raw = import.meta.env.VITE_API_URL;
+  const raw = process.env.NEXT_PUBLIC_API_URL;
   if (typeof raw !== 'string' || raw.trim().length === 0) {
     return '';
   }

@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import SiteLayout from '../../components/layout/SiteLayout/SiteLayout';
 import { analyticsProcessorName } from '../../analytics-processor-name';
 import styles from './LegalPolicy.module.css';
@@ -290,7 +292,7 @@ export function PrivacyPolicy() {
         <div className="wrap">
 
           {/* Back link */}
-          <Link to="/" className={styles.backLink}>
+          <Link href="/" className={styles.backLink}>
             ← Back to home
           </Link>
 
@@ -382,7 +384,7 @@ export function PrivacyPolicy() {
               </div>
               <p className={styles.officerLead}>
                 For grievances, data deletion requests, or to obtain this policy in Hindi or any Eighth Schedule official language, reach out directly. You can also delete your account yourself on the{' '}
-                <Link to="/delete-account">delete account</Link> page.
+                <Link href="/delete-account">delete account</Link> page.
               </p>
               <div className={styles.officerDetails}>
                 <div className={styles.officerField}>

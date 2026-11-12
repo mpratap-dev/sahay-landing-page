@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useRef, useCallback } from 'react';
 import SectionHead from '../../ui/SectionHead/SectionHead';
 import CarouselCard from './CarouselCard';
