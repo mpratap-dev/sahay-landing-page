@@ -10,10 +10,10 @@ export function HowItWorks() {
       <div className={`wrap ${styles.howGrid}`}>
         <div className={styles.howCopy}>
           <Eyebrow>Simple by design</Eyebrow>
-          <h2>Three steps to a more relevant feed.</h2>
+          <h2>How SAHAY helps you.</h2>
           <p>
-            You shouldn't have to work hard to stay informed. Start with what
-            matters to you and let SAHAYY help you catch up.
+            From discovering what the government is doing to finding the right
+            authority for your civic issues — SAHAY is built to help you every step of the way.
           </p>
         </div>
 

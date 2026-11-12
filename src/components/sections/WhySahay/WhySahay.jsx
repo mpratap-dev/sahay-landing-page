@@ -9,15 +9,15 @@ export function WhySahay() {
     <section className={styles.section} id="why-sahay">
       <div className="wrap">
         <SectionHead
-          eyebrow="Less noise, more signal"
+          eyebrow="Two pillars, one platform"
           title={
             <>
-              Stay in the loop.
+              Informed citizens.
               <br />
-              On your own terms.
+              Empowered action.
             </>
           }
-          description="SAHAYY is designed to make catching up feel simple, relevant and respectful of your time."
+          description="SAHAY helps you understand what the government is doing and guides you to the right authority when you need help."
         />
         <div className={styles.features}>
           {FEATURES.map((feature) => (

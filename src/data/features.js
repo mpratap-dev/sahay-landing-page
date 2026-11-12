@@ -1,20 +1,20 @@
 export const FEATURES = [
   {
-    icon: '⌘',
-    title: 'Your interests, first',
+    icon: '◎',
+    title: 'Government updates, in one place',
     description:
-      'Follow the topics you care about, from technology and startups to sports, governance and lifestyle. Your feed reflects your choices.',
+      'Schemes, job vacancies, infrastructure projects, welfare initiatives and policy announcements — all sourced from official government channels and presented clearly.',
   },
   {
     icon: '≋',
-    title: 'The key points, clearly',
+    title: 'AI summaries, without distortion',
     description:
-      'Get a short brief with the main takeaways before deciding whether to read the full story from its original publisher.',
+      'Concise, AI-generated summaries of authentic government updates, without sensationalism or editorial bias. The information you need, easy to understand.',
   },
   {
     icon: '◌',
-    title: 'Curated, not chaotic',
+    title: 'Find the right authority',
     description:
-      'A cleaner way to catch up, without needing to scroll through an endless stream of unrelated headlines.',
+      'Not sure who to contact about a civic issue? SAHAY helps you identify the responsible government department and find the appropriate grievance channel.',
   },
 ];

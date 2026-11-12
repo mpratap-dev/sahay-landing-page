@@ -1,22 +1,22 @@
 export const FAQS = [
   {
-    question: 'What is SAHAYY today?',
+    question: 'What is SAHAY?',
     answer:
-      'SAHAYY is a personalised news brief app. You choose topics, browse concise summaries of published English-language news, and open the original publisher’s story for more detail.',
+      'SAHAY (Smart Access and Holistic Assistance for You) is a citizen-focused digital platform that bridges the information gap between citizens and the government. It provides authentic government updates with AI-generated summaries and helps citizens find the right authority for civic issues.',
   },
   {
-    question: 'Does SAHAYY show every news story?',
+    question: 'What kind of government updates does SAHAY cover?',
     answer:
-      'No. The experience is curated to help you focus on relevant stories rather than trying to reproduce an unlimited news feed.',
+      'SAHAY covers government schemes and benefits, job vacancies and exam results, infrastructure projects, public welfare initiatives, policy announcements, and other important developments that affect citizens across India.',
   },
   {
-    question: 'Are civic services available yet?',
+    question: 'How does SAHAY help with civic issues?',
     answer:
-      'Not yet. Easier access to civic information is part of SAHAYY’s longer-term vision. We will clearly communicate when those features become available.',
+      "When you face a civic problem — such as a damaged road, water supply disruption, or sanitation issue — SAHAY helps you identify the responsible government department, find official grievance portals, and understand the steps to raise a complaint or seek assistance.",
   },
   {
-    question: 'Where does the news come from?',
+    question: 'Where does the information come from?',
     answer:
-      'SAHAYY creates concise briefs based on published news and identifies the publisher. You can use the story link to read the original coverage.',
+      'All information on SAHAY is sourced directly from official government sources. We present it through concise, AI-generated summaries without sensationalism or editorial distortion, so you get authentic information that is easy to discover and understand.',
   },
 ];

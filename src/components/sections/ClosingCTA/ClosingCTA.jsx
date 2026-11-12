@@ -9,11 +9,11 @@ export function ClosingCTA() {
     <section className={styles.closing}>
       <div className="wrap">
         <div className={styles.closingInner}>
-          <Eyebrow align="center">Make room for what matters</Eyebrow>
-          <h2 className={styles.title}>A little more clarity in your day.</h2>
+          <Eyebrow align="center">For every citizen</Eyebrow>
+          <h2 className={styles.title}>Stay informed. Find the right help.</h2>
           <p className={styles.description}>
-            Follow your interests. Catch up on the key points. Spend less time
-            sorting through noise.
+            Authentic government updates. Clear summaries. Guidance to the right
+            authority — when you need it most.
           </p>
           <Button
             variant="primary"

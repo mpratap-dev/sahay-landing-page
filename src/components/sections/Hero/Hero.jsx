@@ -9,14 +9,15 @@ export function Hero() {
     <section className={styles.hero} id="hero">
       <div className={`wrap ${styles.heroGrid}`}>
         <div>
-          <Eyebrow>A more personal way to stay informed</Eyebrow>
+          <Eyebrow>Keeping citizens informed and empowered</Eyebrow>
           <h1 className={styles.title}>
-            News for your world. <span className={styles.gradient}>Not more noise.</span>
+            Government information,{' '}
+            <span className={styles.gradient}>made accessible.</span>
           </h1>
           <p className={styles.heroCopy}>
-            Choose the topics you care about. SAHAYY brings you concise,
-            curated news briefs, so you can keep up with what matters to you
-            without an endless, overwhelming feed.
+            SAHAY bridges the gap between citizens and the government — bringing
+            you authentic updates, AI-generated summaries, and guidance to help
+            you find the right authority when you need help.
           </p>
           <div className={styles.actions}>
             <Button variant="primary" href="#how-it-works">
@@ -28,7 +29,7 @@ export function Hero() {
           </div>
           <div className={styles.quietProof}>
             <span className={styles.dot} />
-            Your interests shape your feed. You stay in control.
+            Authentic sources. No sensationalism. No noise.
           </div>
         </div>
 

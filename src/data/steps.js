@@ -1,20 +1,20 @@
 export const STEPS = [
   {
     num: '01',
-    title: 'Choose your interests',
+    title: 'Discover government updates',
     description:
-      'Select the topics you want to hear about during setup. You can shape your experience around what matters to you.',
+      'Browse important government announcements — schemes, job vacancies, infrastructure projects, welfare initiatives and more — sourced directly from official channels.',
   },
   {
     num: '02',
-    title: 'Scan the key takeaways',
+    title: 'Read concise AI summaries',
     description:
-      'Read concise AI-generated news briefs that make the main points easier to understand at a glance.',
+      'Understand what each update means for you through clear, AI-generated summaries. Authentic information, without editorial distortion.',
   },
   {
     num: '03',
-    title: 'Go deeper when you want',
+    title: 'Get help for civic issues',
     description:
-      "Open the original publisher's story for more context, or save a brief to revisit later.",
+      'Facing a civic problem? SAHAY helps you identify the right government department, find official grievance portals, and understand the steps to raise a complaint.',
   },
 ];

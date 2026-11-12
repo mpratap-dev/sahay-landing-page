@@ -9,23 +9,21 @@ export function Vision() {
         <div className={styles.visionCard}>
           <div>
             <span className={styles.futureLabel}>
-              Our longer-term vision · In development
+              Our approach · What we stand for
             </span>
             <h2 className={styles.title}>
-              From staying informed to finding the right help.
+              Built on authenticity, clarity and accessibility.
             </h2>
             <p>
-              We believe understanding what's happening is only one part of being
-              an informed citizen. Over time, SAHAYY aims to make civic information
-              easier to navigate, helping people discover relevant public services
-              and understand where to turn for support.
+              SAHAY is built around three principles: <strong>Authenticity</strong> — information
+              sourced directly from official and credible government sources.{' '}
+              <strong>Clarity</strong> — simple, concise explanations without
+              sensationalism. <strong>Accessibility</strong> — making government
+              information and public services easier to discover and understand.
             </p>
             <p>
-              <strong>
-                This is a future direction, not a feature available in the app today.
-              </strong>{' '}
-              We're focused on building the news experience first and learning
-              from real users.
+              Ultimately, SAHAY aims to make citizens more informed, aware and
+              empowered through information and assistance sourced from the appropriate authorities.
             </p>
           </div>
 

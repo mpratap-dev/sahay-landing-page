@@ -36,14 +36,14 @@ export function Navbar() {
           </div>
 
           <div className={styles.navActions}>
-            <Button
-              variant="secondary"
-              href={toHomeHash('#see-it')}
-              className={styles.desktopBtn}
-              onClick={closeMenu}
-            >
-              See the app ↗
-            </Button>
+            <Link to="https://play.google.com/store/apps/details?id=com.shaw.sahayy" target="_blank" aria-label="SAHAYY play store">
+              <Button
+                variant="secondary"
+                className={styles.desktopBtn}
+              >
+                Get the app ↗
+              </Button>
+            </Link>
             <button
               className={styles.menuToggle}
               id="menuToggle"
