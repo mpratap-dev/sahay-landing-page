@@ -10,7 +10,7 @@ import styles from './DeleteAccount.module.css';
 
 const analyticsProcessor = analyticsProcessorName();
 const APP_NAME = 'SAHAYY';
-const DEVELOPER_NAME = 'SHAW Technologies Private Limited';
+const DEVELOPER_NAME = 'SHAW Technologies';
 
 const DELETED_ON_CONFIRM = [
   'Account record (email, display name, avatar)',

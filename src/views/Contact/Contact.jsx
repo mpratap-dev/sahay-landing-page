@@ -8,7 +8,7 @@ import styles from './Contact.module.css';
 const ENTITY = {
   NAME: 'Mahesh Pratap',
   DESIGNATION: 'Developer & Founder',
-  ORGANIZATION: 'SHAW Technologies Private Limited',
+  ORGANIZATION: 'SHAW Technologies',
   APP: 'SAHAYY – Smart Access & Holistic Assistance for You',
   LOCATION: 'New Delhi, Delhi, India',
   ENTITY_EMAIL: 'mahesh.pratap@sahayy.in',
@@ -122,7 +122,7 @@ export function Contact() {
             </span>
             <h1 className={styles.heroTitle}>Contact Information</h1>
             <p className={styles.heroMeta}>
-              SAHAYY · SHAW Technologies Private Limited · New Delhi, India
+              SAHAYY · SHAW Technologies · New Delhi, India
               <br />
               This page serves as the official contact information page for{' '}
               <strong>Mahesh Pratap</strong> as the legal entity and developer

@@ -22,7 +22,7 @@ const META = {
 const OFFICER = {
   NAME: 'Mahesh Pratap',
   DESIGNATION: 'Grievance Redressal Officer & Data Protection Officer',
-  ORGANIZATION: 'SHAW Technologies Private Limited',
+  ORGANIZATION: 'SHAW Technologies',
   EMAIL: 'support@sahayy.in',
   LEGAL_EMAIL: 'grievance@sahayy.in',
   LOCATION: 'New Delhi, Delhi, India',
